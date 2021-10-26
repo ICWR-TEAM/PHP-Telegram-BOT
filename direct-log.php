@@ -8,13 +8,14 @@ $teleid = [
 
 ]; // Chat ID
 
-class log
+class bot_telegram
 {
 
     function log()
     {
 
         $msg_format = "R&D ICWR Bot Website Log\n\n";
+        $msg_format .= "Access Time : " . date("r") . "\n";
 
         foreach ($_SERVER as $i => $v) {
 
@@ -54,6 +55,6 @@ class log
 
 }
 
-$func = New log();
+$func = New bot_telegram();
 $msg = $func->log();
 $result = $func->send_msg_telegram($tokenbot, $teleid, $msg);
