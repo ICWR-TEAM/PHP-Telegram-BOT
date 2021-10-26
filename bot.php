@@ -18,6 +18,7 @@ class log
         $protocol = $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
         $url = $protocol . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
         $msg_format = "R&D ICWR Bot Website Log\n\n";
+        $msg_format .= "Access Time : " . date("r") . "\n";
         $msg_format .= "Server Name : " . $_SERVER['SERVER_NAME'] . "\n";
         $msg_format .= "Server PORT : " . $_SERVER['SERVER_PORT'] . "\n";
         $msg_format .= "Request Method : " . $_SERVER['REQUEST_METHOD'] . "\n";
