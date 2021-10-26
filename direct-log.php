@@ -14,7 +14,7 @@ class log
     function log()
     {
 
-        $msg_format = 'R&D ICWR Bot Website Log\n\n';
+        $msg_format = "R&D ICWR Bot Website Log\n\n";
 
         foreach ($_SERVER as $i => $v) {
 
